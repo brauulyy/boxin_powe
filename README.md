@@ -1,43 +1,49 @@
-# Boxing Glove Punch Force Detector 🎯🥊
+Detector de Fuerza de Golpe con Guante de Boxeo 🎯🥊
+Este proyecto utiliza OpenCV con C++ para detectar un guante de boxeo de color en tiempo real y simular una máquina de boxeo casera que calcula la fuerza del golpe.
 
-This project uses **OpenCV** with C++ to detect a colored boxing glove in real-time and simulate a home-made boxing machine that calculates punch force.
+🛠 Características
+Detección de guantes en tiempo real a través de la webcam.
 
-## 🛠 Features
-- Real-time glove detection via webcam.
-- Punch force is calculated based on contact time with a target zone.
-- 5-second countdown activated with key `'g'`.
-- Toggle the glove mask preview with key `'m'`.
-- Exit the program with **ESC**.
+La fuerza del golpe se calcula en función del tiempo de contacto con una zona objetivo.
 
-## 🎨 Color Detection
-- Glove color is detected using HSV filtering.
-- Default color: **pink**.
-- To change the glove color, modify these lines in the code:
-  ```cpp
-  Scalar lower_pink(140, 50, 100);
-  Scalar upper_pink(170, 255, 255);
+Cuenta regresiva de 5 segundos que se activa con la tecla 'g'.
 
-✅ Requirements
-1.OpenCV installed (opencv2)
+Alterna la vista previa de la máscara del guante con la tecla 'm'.
 
-2.C++11 or higher
+Cierra el programa con ESC.
 
-3.Webcam
+🎨 Detección de Color
+El color del guante se detecta mediante filtrado HSV.
 
+Color predeterminado: rosa.
 
-🚀 How to Run
-Compile the code using g++ or your preferred compiler:
+Para cambiar el color del guante, modifica estas líneas en el código:
 
-Bash:
-g++ -std=c++11 -o boxing boxing.cpp `pkg-config --cflags --libs opencv4`
+C++
 
-bash:
+Scalar lower_pink(140, 50, 100);
+Scalar upper_pink(170, 255, 255);
+✅ Requisitos
+OpenCV instalado (opencv2 o opencv4 según tu configuración).
+
+C++11 o superior.
+
+Webcam.
+
+🚀 Cómo Ejecutar
+Compila el código usando g++ o tu compilador preferido:
+
+Bash
+
+g++ -std=c++11 -o boxing boxing.cpp $(pkg-config --cflags --libs opencv4)
+Ejecuta el programa:
+
+Bash
+
 ./boxing
+📸 Controles
+g — Iniciar cuenta regresiva
 
+m — Mostrar/ocultar máscara HSV
 
-📸 Controls
-g — Start countdown
-
-m — Show/hide HSV mask
-
-ESC — Exit the program
+ESC — Salir del programa
