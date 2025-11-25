@@ -81,7 +81,7 @@ int main() {
                     }
                     else {
                         if (tiempoInicio.time_since_epoch().count() > 0) {
-                            // Termina la medición
+                            // Termina la medicion
                             tiempoFin = steady_clock::now();
                             auto duracion = duration_cast<milliseconds>(tiempoFin - tiempoInicio).count();
                             int fuerza = max(0, 999 - static_cast<int>(duracion * 10));  // Calcula "fuerza"
