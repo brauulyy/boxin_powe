@@ -20,19 +20,15 @@ Scalar lower_pink(140, 50, 100);
 Scalar upper_pink(170, 255, 255);
 ```
 
-##✅ Requisitos
+## ✅ Requisitos
 OpenCV instalado (opencv2 u opencv4).
 
 C++11 o superior.
 
 Webcam.
 
-##🚀 Cómo Ejecutar
-Compilar
-bash
-Copiar código
+## 🚀 Cómo Ejecutar
 g++ -std=c++11 -o boxing boxing.cpp $(pkg-config --cflags --libs opencv4)
-Ejecutar
-bash
-Copiar código
+
+## Ejecutar
 ./boxing
